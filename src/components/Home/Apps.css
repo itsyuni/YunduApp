@@ -1,0 +1,88 @@
+table{
+    table-layout: fixed;
+    margin: auto;
+    margin-top: 10px;
+}
+table tr:first-of-type td{
+    border-bottom: solid 15px transparent;
+}
+table td:first-child{
+    border-left: 0;
+}
+table td{
+    border-left: solid 30px transparent;
+    transition: transform .2s;
+}
+table div{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 3px solid rgba(0,0,0,0.06);
+}
+table div svg{
+    width: 27.5px;
+    height: 27.5px;
+}
+table div svg path{
+    fill:white;
+}
+table tr:last-of-type td:last-of-type svg path{
+    fill:var(--text);
+}
+table p{
+    font-size: 0.75em;
+    line-height: 1em;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    width: 55px;
+    height: fit-content;
+}
+@media(min-width:360px){
+    table tr:first-of-type td{
+        border-bottom:20px solid transparent;
+    }
+    table div{
+        width:80px;
+        height:80px;
+    }
+    table div svg{
+        width:32.5px;
+        height:32.5px;
+    }
+    table p{
+        font-size:0.85em;
+        width:65px;
+    }
+}@media(min-width:400px){
+    
+    table tr:first-of-type td{
+        border-bottom:25px solid transparent;
+    }
+    table td:not(:first-of-type){
+        border-left:35px solid transparent;
+    }
+    table div{
+        width:87.5px;
+        height:87.5px;
+    }
+    table div svg{
+        width:37.5px;
+        height:37.5px;
+    }
+    table p{
+        font-size:0.95em;
+        width:75px;
+    }
+    table{
+        margin-top:15px;
+    }
+}

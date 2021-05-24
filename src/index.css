@@ -1,0 +1,115 @@
+
+	@font-face{
+            font-family:'Gotham Pro';
+            src:url('./fonts/GothamPro.ttf');
+        }
+	@font-face{
+            font-family:'Gotham';
+            src:url('./fonts/gotham.ttf');
+        }
+        @font-face{
+            font-family:'Montserrat';
+            src:url('./fonts/montserrat.ttf');
+        }   
+        @font-face{
+            font-family:'Montserrat Medium';
+            src:url('./fonts/montserratmedium.ttf');
+        }
+        @font-face{
+            font-family:'Montserrat SemiBold';
+            src:url('./fonts/bold.ttf');
+        }
+        :root{
+            --brand:#33d190;
+        }
+        *{
+transition:border-color,color,background .4s;
+            appearance: none;
+            box-sizing:border-box;
+            -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+        }
+        .disableanimations, .disableanimations *{
+            transition: none !important;
+        }
+        body{
+        background:var(--primary);
+        margin:0;
+        padding:0;
+        font-size:1em;
+	user-select:none;
+        }
+:root{
+--primary:#fefefe;
+--secondary:#fafafa;
+--card:#fff;
+--card-placeholder:linear-gradient(to right, rgba(254,254,254, 0) 46%, rgba(254,254,254, 0.35) 50%, rgba(254,254,254, 0) 54%) 50% 50%;
+--card-placeholder-primary:linear-gradient(to right, rgba(254,254,254, 0) 46%, rgba(254,254,254, 0.35) 50%, rgba(254,254,254, 0) 54%) 50% 50%;
+--card-icons:#e6e6e6;
+--card-shadow:rgb(0 0 0 / 10%) 0px 3px 6px -1px, rgb(0 0 0 / 6%) 0px -1px 4px -1px;
+--text:black;
+--input:#fbfbfb;
+--border-color:#f4f4f4;
+--input-border-color:#f7f7f7;
+--hr-color:#dadada;
+--bottom-icon:#6f6f6f;
+--navbar:white;
+}
+.darkmode{
+--primary:#1c1d26;
+--secondary:black;
+--card:#0c0c10;
+--card-placeholder:linear-gradient(to right, rgba(11,11,15, 0) 46%, rgba(11,11,15, 0.35) 50%, rgba(11,11,15, 0) 54%) 50% 50%;
+--card-placeholder-primary:linear-gradient(to right, rgba(28,29,38, 0) 46%, rgba(28,29,38, 0.35) 50%, rgba(28,29,38, 0) 54%) 50% 50%;
+--card-icons:#40404a;
+--card-shadow:rgb(127 127 127 / 15%) 0px 0px 20px 0px;
+--text:white;
+--input:#14151c;
+--border-color:#2c2e3a;
+--input-border-color:#23252f;
+--hr-color:#5f6677;
+--bottom-icon:#c0c0c0;
+--navbar:black;
+}
+
+        p,h1,h2,h3,h4,h5,h6{
+            margin:0;
+        }
+p,h1,h2,h3,h4,h5,span,label,li{
+
+color:var(--text);}
+        :focus{
+            outline:none;
+        }
+        p, span, a{
+        line-height: 1.2em;
+	font-size:1em;
+font-weight:600;
+	letter-spacing:0.3px;
+        font-family: 'Gotham Pro';
+        }
+        a{
+            text-decoration:underline;
+            color:var(--brand);
+            text-decoration-color:var(--brand);
+        }
+        h1,h2{
+            font-family: 'Montserrat';
+        }
+        h3,h4,h5,h6{
+            font-family:'Montserrat SemiBold';
+        }
+label{
+    font-family: 'Gotham Pro';
+    font-weight: 600;
+    display: block;
+    font-size: 0.9em;
+    margin-top: 10px;
+ 
+   margin-bottom: 3px;
+}

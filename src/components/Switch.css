@@ -1,0 +1,38 @@
+
+
+.Switch{
+	cursor: pointer;
+	width: 60px;
+	height: 30px;
+	background: var(--secondary);
+    border:2px solid var(--border-color);
+	display: block;
+    margin:0;
+	border-radius: 100px;
+	position: relative;
+    transition:background .3s, border-color .3s;
+}
+.Switch::after{
+    content:'';
+    position: absolute;
+	top: 50%;
+    transform:translateY(-50%);
+	left: 3.5px;
+    padding:3.5px;
+    box-sizing: border-box;
+	width:20px;
+	height: 20px;
+	background: var(--brand);
+	border-radius: 90px;
+	transition: background 0.3s, left .3s, transform .3s;
+}
+.Switch[data-switched="true"]::after{
+	left: calc(100% - 3.5px);
+	background: white;
+	transform: translateX(-100%) translateY(-50%);
+}
+
+.Switch[data-switched="true"] {
+	background: var(--brand);
+    border-color:transparent;
+}

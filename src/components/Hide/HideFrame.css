@@ -1,0 +1,12 @@
+.HideFrame{
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    position: fixed;
+    z-index:8;
+    top: 0;
+    left: 0;
+visibility:hidden;
+opacity:0;
+transition:opacity .3s, visibility .3s
+}

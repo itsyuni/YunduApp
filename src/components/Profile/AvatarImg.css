@@ -1,0 +1,18 @@
+.AvatarImg{
+    width: 80px;
+    background: var(--primary);
+    margin: auto;
+overflow:hidden;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 2.2px solid var(--border-color);
+    height: 80px;
+display:flex;
+justify-content:center;
+align-items:center;
+    position:relative;
+}
+.AvatarImg svg{
+width: 40px;
+    height: 40px;
+}

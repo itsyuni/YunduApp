@@ -1,0 +1,18 @@
+.SmallInput{
+    border: 2.2px solid var(--input-border-color);
+    border-radius: 10px;
+    background:var(--input);
+    color: var(--text);
+    font-size: 1em;
+    font-family: 'Gotham';
+    padding: 12px;
+    width: 100%;
+    transition: border-color .3s;
+}
+.Last{
+margin-left:7px;
+}
+
+.SmallInput:focus{
+    border-color:var(--brand);
+  }

@@ -1,0 +1,32 @@
+.AvatarSmall{
+    border-radius: 50px;
+    width: 45px;
+    position: relative;
+    margin-right: 10px;
+    height: 45px;
+border:2px solid var(--border-color);
+    margin-left: 2px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.AvatarSmall::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -13.5px;
+    width: 0;
+    height: 0;
+    transform: none;
+    border-top: solid 5.5px var(--text);
+    border-left: solid 4.5px transparent;
+    border-right: solid 4.5px transparent;
+    transition: transform .3s;
+}
+.AvatarSmall[data-clicked="true"]::after{
+    transform:rotate(180deg);
+}
+.AvatarSmall svg{
+width:24px;
+height:24px;
+}

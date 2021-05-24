@@ -1,0 +1,34 @@
+.NotifyButton{
+    width: 42px;
+    height: 42px;
+    margin:1.5px 0;
+    position: relative;
+    transition: transform .3s;
+}
+.NotifyButton svg{
+    width:42px;
+    height:42px;
+}
+.NotifyButton svg path{
+    fill:var(--text);
+}
+.NotifyBadge{
+    border-radius: 50%;
+    background: #F94B4B;
+    width: 8px;
+    visibility:hidden;
+    height: 8px;
+    transition: opacity .3s, visibility .3s;
+    opacity: 0;
+    box-shadow: 0 0 0 2.2px var(--primary);
+    position: absolute;
+    bottom: 8.5px;
+    right: 6px;
+}
+.NotifyButton[data-clicked="true"]{
+    transform:rotate(25deg);
+}
+.NotifyButton[data-clicked="true"] .NotifyBadge{
+    opacity:1;
+    visibility:visible;
+}

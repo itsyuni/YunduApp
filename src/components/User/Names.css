@@ -1,0 +1,77 @@
+.UserAvatar{
+    width: 80px;
+    background: var(--secondary);
+    overflow:hidden;
+    border-radius: 50px;
+    border: 2.2px solid var(--border-color);
+    height: 80px;
+    position:relative;
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserAvatar svg{
+width: 40px;
+    height: 40px;
+}
+.UserContent{
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+.UserContent *{
+    transition:none;
+}
+.UserContent h3{
+    font-size:1.3em;
+}
+.UserContent > div:last-of-type{
+    margin-left:10px;
+}
+.UserContent[data-loading="true"]::before{
+    visibility:visible;
+    }
+    .UserContent[data-loading="true"] .UserAvatar{
+        background:var(--card-icons);
+        border:none;
+        width:70px;height:70px;
+    }
+    .UserContent[data-loading="true"] h3{
+        width:70px;
+        border-radius:10px;
+        height:13.2px;
+        background:var(--card-icons);
+        color:transparent;
+    }
+    .UserContent[data-loading="true"] p{
+        width:100px;
+        margin-top:7px;
+        border-radius:10px;
+        height:13.2px;
+        background:var(--card-icons);
+        color:transparent;
+    }
+    .UserContent::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        visibility:hidden;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        width: 500%;
+        margin-left: -250%;
+        animation: phAnimation 0.9s linear infinite;
+        background:var(--card-placeholder-primary);
+        will-change: transform;
+    }
+    @keyframes phAnimation {
+        0% {
+          transform: translate3d(-30%, 0, 0);
+        }
+        100% {
+          transform: translate3d(30%, 0, 0);
+        }
+      }

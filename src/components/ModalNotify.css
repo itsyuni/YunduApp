@@ -1,0 +1,98 @@
+.ModalNotify{
+    position: absolute;
+    padding: 16px;
+    background: var(--primary);
+    bottom: 47px;
+    left: 15px;
+    border:2px solid var(--border-color);
+    border-top-left-radius:13px;
+    
+    border-top-right-radius:13px;
+    overflow:hidden;
+    height:50vh;
+    transition:opacity .3s, visibility .3s, z-index .3s;
+    width:calc(100% - 30px);
+}
+.ModalNotify-Header{
+    width:calc(100% + 32px);
+    margin-top:-16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:-16px;
+    border-bottom:2px solid var(--border-color);
+    padding:13px 15px;
+}
+.ModalNotify ul{
+    list-style-type:none;
+    position:relative;
+padding:0;
+margin:5px 0;
+}
+.ModalNotify li{
+margin-left:10px;
+    font-family:'Gotham Pro';
+font-weight:600;
+}
+.ModalNotify h3{
+font-size:1.15em;
+}
+
+.ModalNotify[data-loading="true"] ul::before{
+    visibility:visible;
+    }
+    .ModalNotify ul{
+        margin-top:20px;
+    }
+    .ModalNotify[data-loading="true"] li{
+        width:calc(100% - 25px);
+        border-radius:10px;
+        height:20px;
+        margin-top:13px;
+        position:relative;
+        margin-left:25px;
+        background:var(--card-icons);
+        color:transparent;
+    }
+    .ModalNotify[data-loading="true"] li div{
+        width:20px;
+        position:absolute;
+        top:0;
+        left:-25px;
+        height:20px;
+        border-radius:30px;
+        background:var(--card-icons);
+        color:transparent;
+    }
+.ModalNotify ul::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    visibility:hidden;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    animation: phAnimation 0.9s linear infinite;
+    background:var(--card-placeholder-primary);
+    will-change: transform;
+}
+@keyframes phAnimation {
+    0% {
+      transform: translate3d(-30%, 0, 0);
+    }
+    100% {
+      transform: translate3d(30%, 0, 0);
+    }
+  }
+  .ModalNotifyWall{
+    width:100vw;
+    height:100vh;
+    transition:opacity .3s, visibility .3s, z-index .3s;
+    position:fixed;
+    top:0;
+    background:rgba(0,0,0,0.12);
+    left:0;
+    }

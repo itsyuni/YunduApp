@@ -1,0 +1,11 @@
+.Welcome{
+font-size:1.1em;
+}
+@media(min-width:360px){
+.Welcome{
+font-size:1.2em;
+}}
+@media(min-width:400px){
+.Welcome{
+font-size:1.3em
+}}

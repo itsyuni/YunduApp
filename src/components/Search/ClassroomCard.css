@@ -1,0 +1,81 @@
+.ClassroomCard{
+    background: var(--card);
+    border-radius: 13px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-top: 13px;
+    box-shadow: var(--card-shadow);
+}
+.ClassroomCard-Img{
+border-radius:50%;
+width:50px;
+margin-right:12px;
+height:50px;
+}
+.ClassroomCard-Text p{
+    margin-top:2px;
+}
+.ClassroomCard-Text h3{
+    position:relative;
+    line-height:19px;
+}
+.ClassroomCard[data-verified="true"]:not([data-loading="true"]) h3::after{
+    content: url("data:image/svg+xml,%3Csvg fill='%2333d190' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Слой_1' x='0px' y='0px' viewBox='0 0 999.7 757' style='enable-background:new 0 0 999.7 757;' xml:space='preserve'%3E%3Cg%3E%3Crect x='147.9' y='294.6' transform='matrix(0.7121 -0.7021 0.7021 0.7121 -310.3535 307.9326)' width='144.8' height='475.5'/%3E%3Cpath d='M104.9,314L437,650.8l-101.3,99.9L3.6,413.9L104.9,314 M104.9,310.4L0,413.9l335.6,340.4l104.9-103.4L104.9,310.4 L104.9,310.4z'/%3E%3C/g%3E%3Cg%3E%3Crect x='154.7' y='306.6' transform='matrix(0.7121 -0.7021 0.7021 0.7121 -88.0246 542.3511)' width='925.2' height='143.8'/%3E%3Cpath d='M896.2,5l98.5,99.9L338.3,752l-98.5-99.9L896.2,5 M896.2,0L234.9,652.1L338.3,757l661.4-652.1L896.2,0L896.2,0z'/%3E%3C/g%3E%3C/svg%3E");
+    position:absolute;
+    height:15px;
+    width:15px;
+    right:-19px;
+    top:0;
+    border-radius:50px;
+}
+
+.ClassroomCard[data-loading="true"]::before{
+visibility:visible;
+}
+.ClassroomCard[data-loading="true"] h3{
+    width:70px;
+    border-radius:10px;
+    height:15px;
+    background:var(--card-icons);
+    color:transparent;
+}
+.ClassroomCard[data-loading="true"] h3::after{
+    background:var(--card-icons);
+}
+.ClassroomCard[data-loading="true"] p{
+    width:100px;
+    margin-top:7px;
+    border-radius:10px;
+    height:15px;
+    background:var(--card-icons);
+    color:transparent;
+}
+.ClassroomCard[data-loading="true"] .ClassroomCard-Img{
+    background:var(--card-icons);
+}
+.ClassroomCard::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    visibility:hidden;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 600%;
+    margin-left: -250%;
+    animation: phAnimation 0.95s linear infinite;
+    background:var(--card-placeholder);
+    will-change: transform;
+}
+@keyframes phAnimation {
+    0% {
+      transform: translate3d(-30%, 0, 0);
+    }
+    100% {
+      transform: translate3d(30%, 0, 0);
+    }
+  }
